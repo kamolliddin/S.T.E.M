@@ -10,18 +10,19 @@ def record_audio(ask=False):
 
 		while True:
 			try:
-				audio = recognizer.listen(source)
+				audio = recognizer.listen(source,timeout=5,phrase_time_limit=5)
+				print("Command received")
 				voice_data = None
 				voice_data = recognizer.recognize_google(audio)
 				break
 			except sr.UnknownValueError:
-				print("Try again! I cannot understand you!")
+				print("Try again. I cannot understand you")
 				continue
 			except sr.RequestError:
-				print("Service is down!")
+				print("The service is down.")
 				continue
-
-		return voice_data
+		print(">>", voice_data.lower())
+		return voice_data.lower()
 
 result = record_audio("Speak! ...")
 print(result)
