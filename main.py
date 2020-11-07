@@ -11,10 +11,6 @@ import time
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 
-
-
-
-
 def stem_speak(text):
 	text = str(text)
 	engine.say(text)
@@ -96,10 +92,6 @@ def respond(voice_data, name='Kamoliddin'):
 		webbrowser.get().open(url)
 		print("Here is what I found for" + search_term + "on google")
 		stem_speak("Here is what I found for" + search_term + "on google")
-
-	# 	elif 'search' in voice_data:
-	# search = record_audio("What do you want to search for")
-	# url = 'https://google.com/search?q=' + search
 
 	# search youtube
 	if there_exists(["youtube search"], voice_data):
