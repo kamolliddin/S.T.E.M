@@ -13,7 +13,7 @@ pip install pyttsx3
 ```
 
 ### Available Voice Commands
-
+```
 -['STEM']
 -["what is your name", "what's your name", "tell me your name", "who are you"]
 -["change status"]
@@ -30,3 +30,4 @@ pip install pyttsx3
 -["what is my location"]
 -["find location"]
 -["exit", "quit", "sleep"]
+```
